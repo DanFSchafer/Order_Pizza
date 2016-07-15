@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ordering some Pizza</title>
+
+    <!-- jQuery link -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- Javascript link -->
+     <script src="js/scripts.js"></script>
+<!-- Latest compiled and minified Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Style sheet link -->
+     <link href="css/styles.css" rel="stylesheet" media="all">
+
+  </head>
+  <body>
+
+  <div class="container">
+  <h1>Create your own PIZZA !</h1>
+  <p>Each pizza includes cheese, yummy tomato sauce, and one topping. Each additional topping adds $1 to the cost.</p><br>
+
+  <!-- begin form -->
+  <div id="options">
+    <form>
+      <h2>What size PIZZA would you like ?</h2>
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="small">
+          Small 10"
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="medium">
+          Medium
+        </label> 12"
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="large">
+          Large 16"
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="xlarge">
+          Mega 18"
+        </label>
+      </div>
+
+      <br><h2>Please check all desired PIZZA toppings:</h2>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value=1 name="toppings">
+          Anchovies
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value=2 name="toppings">
+          Pineapple
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value=3 name="toppings">
+          Pepperoni
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value=4 name="toppings">
+          Sausage
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value=5 name="toppings">
+          Olives
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value=6 name="toppings">
+          Mushrooms
+        </label>
+      </div>
+
+      <button type="submit" class="btn">Order your yummy pizza !</button><br>
+    </form>
+  </div>
+  <!-- end form -->
+
+  <div id="results">
+    <br><h2>The cost for your PIZZA will be: $ <span id=cost></span></h2>
+    <!-- <div id="final"></div> -->
+  </div>
+
+  </div>
+
+  </body>
+</html>
