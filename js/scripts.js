@@ -41,29 +41,19 @@ $(function() {
   $("#options form").submit(function(event) {
   event.preventDefault();
 
-  $("#final").text("");
+  $("#cost").text("");
 
   var pizzaSize = $("input:radio[name=size]:checked").val();
-
   var toppers = [];
   $.each($("input:checkbox[name='toppings']:checked"), function() {
     // toppings.push($(this).val());
     toppers.push(parseInt(($(this).val())));
   });
 
-  // alert("My toppings are: " + toppers.join(", "));
-  console.log(pizzaSize, toppers);
-
   var newPizza = new Pizza("", toppers, pizzaSize, 0);
-
-  console.log(newPizza);
-  // console.log(newPizza.cost());
-  // var cost = newPizza.cost();
-  // console.log(cost);
   newPizza.finalCost = newPizza.cost();
-  console.log(newPizza.finalCost);
 
   $("#results").show();
-  $("#cost").append("$ " + newPizza.finalCost);
+  $("#cost").append("$ " + newPizza.finalCost.toFixed(2));
   });
 });
