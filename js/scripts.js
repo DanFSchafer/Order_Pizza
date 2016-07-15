@@ -1,18 +1,18 @@
 // Pizza constructor
 function Pizza(name, toppings, size, finalCost) {
   this.name = name;
-  this.toppings = [];
-  this.size = "";   // small, medium, large, or mega
+  this.toppings = toppings;
+  this.size = size;   // small, medium, large, or mega
   this.finalCost = finalCost;
 };
 
 //number of items in the toppings array to calculate Cost
-
 Pizza.prototype.numberToppings = function() {
   var toppingsTotal = 0;
-  this.toppings.forEach()
-    toppingsTotal += 1;
-    return toppingsTotal;
+  this.toppings.forEach(function() {
+  toppingsTotal += 1;
+  });
+  return toppingsTotal;
 };
 
 // Cost calculator prototype
@@ -28,17 +28,15 @@ Pizza.prototype.cost = function() {
   } else if (this.size === "large") {
     currentCost = 22;
     multiplyer = 1.5;
-  } else {
+  } else if (this.size === "xlarge") {
       currentCost = 28;
       multiplyer = 2;
-
-  currentCost += (this.numberToppings - 1) * multiplyer;
+  }
+  currentCost += (((this.numberToppings()) - 1) * multiplyer);
   return currentCost;
 };
 
-
-
-//jQuery
+// jQuery
 $(function() {
   $("#options form").submit(function(event) {
   event.preventDefault();
@@ -47,23 +45,25 @@ $(function() {
 
   var pizzaSize = $("input:radio[name=size]:checked").val();
 
-  var toppings = [];
+  var toppers = [];
   $.each($("input:checkbox[name='toppings']:checked"), function() {
-    toppings.push($(this).val());
+    // toppings.push($(this).val());
+    toppers.push(parseInt(($(this).val())));
   });
 
-  // alert("My toppings are: " + toppings.join(", "));
-  console.log(pizzaSize, toppings);
+  // alert("My toppings are: " + toppers.join(", "));
+  console.log(pizzaSize, toppers);
 
-  var newPizza = new Pizza(name, toppings, size, finalCost);
+  var newPizza = new Pizza("", toppers, pizzaSize, 0);
 
-  console.log (newPizza);
-
-  var cost = newPizza.cost();
-
-  console.log(cost);
+  console.log(newPizza);
+  // console.log(newPizza.cost());
+  // var cost = newPizza.cost();
+  // console.log(cost);
+  newPizza.finalCost = newPizza.cost();
+  console.log(newPizza.finalCost);
 
   $("#results").show();
-  $("#final").append("$ " + cost);
+  $("#cost").append("$ " + newPizza.finalCost);
   });
 });
