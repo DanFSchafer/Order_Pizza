@@ -1,3 +1,24 @@
 #results {
   display: none;
 }
+
+body {
+  background-color: #FFDE4C;
+}
+
+.img-border {
+  margin: 30px;
+  border: 10px solid #B23110;
+  padding: 10px;
+  background-color: #FFF200;
+}
+
+.float_right {
+  float: right;
+  width: 150px;
+  /*margin-left: 1em;*/
+}
+
+h2 {
+  /*margin-right: 300px;*/
+}

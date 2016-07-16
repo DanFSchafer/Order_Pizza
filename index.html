@@ -17,6 +17,10 @@
   <body>
 
   <div class="container">
+
+    <div class="row">
+    <div class="col-md-8">
+
     <h1>Welcome to Insley Street PIZZA !</h1>
     <p>Each pizza includes cheese, yummy tomato sauce, and one topping. Additional toppings add the following to the cost, per topping:</p>
     <ul>
@@ -27,81 +31,96 @@
     </ul><br>
 
   <!-- begin form -->
-  <div id="options">
-    <form>
-      <h2>What size PIZZA would you like ?</h2>
-      <div class="radio">
-        <label>
-          <input type="radio" name="size" value="small">
-          Small 10"
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="size" value="medium">
-          Medium
-        </label> 12"
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="size" value="large">
-          Large 16"
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="size" value="xlarge">
-          Mega 18"
-        </label>
-      </div>
+    <div id="options">
+      <form>
+        <h2>What size PIZZA would you like ?</h2>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="small">
+            Small 10"
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="medium">
+            Medium
+          </label> 12"
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="large">
+            Large 16"
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="xlarge">
+            Mega 18"
+          </label>
+        </div>
 
-      <br><h2>Please check all desired PIZZA toppings:</h2>
+        <br><h2>Please check all desired PIZZA toppings:</h2>
 
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value=1 name="toppings">
-          Anchovies
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value=2 name="toppings">
-          Pineapple
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value=3 name="toppings">
-          Pepperoni
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value=4 name="toppings">
-          Sausage
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value=5 name="toppings">
-          Olives
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value=6 name="toppings">
-          Mushrooms
-        </label>
-      </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value=1 name="toppings">
+            Anchovies
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value=2 name="toppings">
+            Pineapple
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value=3 name="toppings">
+            Pepperoni
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value=4 name="toppings">
+            Sausage
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value=5 name="toppings">
+            Olives
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value=6 name="toppings">
+            Mushrooms
+          </label>
+        </div>
+        <br>
 
-      <button type="submit" class="btn">Order your yummy pizza !</button><br>
-    </form>
-  </div id=options>
+        <button type="submit" class="btn">Order your yummy pizza !</button><br>
+      </form>
+    </div>
   <!-- end form -->
 
-  <div id="results">
-    <br><h2>The cost for your PIZZA will be: <span id=cost></span></h2>
-  </div>
+    <div id="results">
+      <br><h2>The cost for your PIZZA will be: <span id=cost></span></h2>
+    </div>
+    </div>
+    
+    <div class="col-md-4">
+      <img class="float_right img-border" src="img/anchovies.jpeg" alt="Anchovies">
+      <img class="float_right img-border" src="img/pineapple.jpg" alt="Pineapple chunks">
+      <img class="float_right img-border" src="img/pepperoni.jpg" alt="Pepperoni">
+      <img class="float_right img-border" src="img/sausage.jpg" alt="chunk of sausage">
+      <img class="float_right img-border" src="img/olives.jpg" alt="sliced olives">
+      <img class="float_right img-border" src="img/mushrooms.jpg" alt="sliced mushrooms">
+    </div>
+    </div>
+
+
+
 
   </div>
 
