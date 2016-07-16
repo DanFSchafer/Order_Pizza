@@ -38,8 +38,6 @@ Pizza.prototype.cost = function() {
 
 // jQuery
 $(function() {
-//Display images of toppings
-
 
 //Pizza options submit button
   $("#options form").submit(function(event) {
